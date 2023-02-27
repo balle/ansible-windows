@@ -1,0 +1,15 @@
+---
+- include_vars: "vars/extensions.yml"
+
+- name: Install VSCode
+  win_package:
+    path: https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
+    arguments: /install /norestart /silent /suppressmsgboxes
+    product_id: '{EA457B21-F73E-494C-ACAB-524FDE069978}_is1'
+
+- name: Install VSCode Extensions
+  win_command: "powershell.exe -"
+  args:
+    chdir: C:\Program Files\Microsoft VS Code
+    stdin: "code --install-extension {{item}} --extensions-dir C:/Users/{{ my_win_user }}/.vscode/extensions"
+  loop: "{{ extensions }}"

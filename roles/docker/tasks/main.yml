@@ -1,0 +1,37 @@
+---
+- name: Install Container Feature
+  win_optional_feature:
+    name: Containers
+    state: present
+
+- name: Install Hyper-V Feature
+  win_optional_feature:
+    name: Microsoft-Hyper-V-All
+    state: present
+
+- name: Install WSL Feature
+  win_optional_feature:
+    name: Microsoft-Windows-Subsystem-Linux
+    state: present
+
+#- name: Get WSL2 Update
+#  win_get_url:
+#    path: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+#    dest: C:\Windows\Temp\wsl2_update.msi
+#  when: ansible_os_family == "Windows"
+
+#- name: Install WSL2 Update
+#  win_command: msiexec.exe /i /quiet C:\Windows\Temp\wsl2_update.msi
+#  when: ansible_os_family == "Windows"
+
+#- name: Set WSL2 to default
+#  win_command: wsl --set-default-version 2
+#  when: ansible_os_family == "Windows"
+
+- name: Get Docker Installer
+  win_get_url:
+    url: https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe
+    dest: C:\Windows\Temp\docker_install.exe
+    
+- name: Install Docker
+  win_command: powershell.exe C:\cygwin64\etc\ansible\roles\docker\files\install.ps1

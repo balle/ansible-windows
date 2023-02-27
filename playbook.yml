@@ -1,0 +1,13 @@
+---
+- name: Workstation setup
+  hosts: localhost
+  vars:
+    - my_win_user: "Hans"
+    - my_win_user_email: "hans@tofu.tld"
+
+  roles:
+    - { name: git, tags: [users, git] }
+    - { name: gpg, tags: [users, gpg] }
+    - { name: vscode, tags: [vscode] }
+    - { name: docker, tags: [docker] }
+ 

@@ -1,0 +1,8 @@
+localhost ansible_user=auticon ansible_shell_type=cmd
+
+#[webservers]
+#alpha.example.org
+#beta.example.org
+
+#www[001:006].example.com
+

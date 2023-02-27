@@ -1,0 +1,6 @@
+[user]
+	email = {{ my_win_user_email }}
+	name = {{ my_win_user }}
+        signingkey = 0xYOUR_GPG_KEYID
+[commit]
+        gpgsign = true

@@ -1,0 +1,22 @@
+---
+- name: Install GPG
+  win_package:
+    path: https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.3.3_20211012.exe
+    arguments: /install /norestart /silent /suppressmsgboxes
+    creates_path: C:\Program Files (x86)\gnupg
+
+- name: GPG config
+  win_template:
+    src: gpg-script-win
+    dest: C:\Users\{{ my_win_user }}\.gpg-script
+
+#- name: Generate GPG key pair on Windows
+#  win_command: gpg --batch --gen-key C:\Users\{{ my_win_user }}/.gpg-script
+#  args:
+#    creates: C:\{{ my_win_user }}\.gnupg/trustdb.gpg
+#  when: ansible_os_family == "Windows"
+
+#- name: Register key id on Windows
+#  win_command: gpg --list-secret-keys --keyid-format LONG | findstr rsa4096 | findstr sec
+#  register: gpgkey
+#  when: ansible_os_family == "Windows"
