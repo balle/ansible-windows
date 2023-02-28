@@ -1,10 +1,9 @@
 ---
 - name: Install Git
-  win_package:
-    path: https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe
-    arguments: /install /norestart /silent /suppressmsgboxes
-    creates_path: C:\Program Files\Git
-
+  win_chocolatey:
+    name: git
+    state: present
+    
 - name: Git config
   win_template:
     src: gitconfig_win
