@@ -1,0 +1,5 @@
+---
+- name: Install signal messenger
+  win_chocolatey:
+    name: signal
+    state: present
