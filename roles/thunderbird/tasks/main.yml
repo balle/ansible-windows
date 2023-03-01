@@ -1,0 +1,5 @@
+---
+- name: Install thunderbird
+  win_chocolatey:
+    name: thunderbird
+    state: present

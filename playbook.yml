@@ -12,5 +12,6 @@
     - { name: vscode, tags: [vscode] }
     - { name: docker, tags: [docker] }
     - { name: firefox, tags: [firefox] }
+    - { name: thunderbird, tags: [thunderbird] }
     - { name: signal, tags: [signal] }
     - { name: deadbeef, tags: [deadbeef] }
