@@ -1,7 +1,10 @@
 # ansible-windows-laptop setup
 
-Install Cygwin including packaes for ansible and git.
+To be able to run Ansible locally on a Windows system install Cygwin 
+including packaes for ansible and git.
+
 Afterwards install the optional Windows Feature for OpenSSH-Server
+
 Edit `C:\ProgramData\ssh\sshd_config` and set `ListenAddress 127.0.0.1`
 In Powershell type the following to start the server
 
