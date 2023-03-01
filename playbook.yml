@@ -6,8 +6,9 @@
     - my_win_user_email: "hans@tofu.tld"
 
   roles:
-    - { name: git, tags: [users, git] }
-    - { name: gpg, tags: [users, gpg] }
+    - { name: git, tags: [git] }
+    - { name: gpg, tags: [gpg] }
+    - { name: python, tags: [python] }
     - { name: vscode, tags: [vscode] }
     - { name: docker, tags: [docker] }
     - { name: signal, tags: [signal] }
