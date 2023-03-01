@@ -11,4 +11,4 @@
     - { name: vscode, tags: [vscode] }
     - { name: docker, tags: [docker] }
     - { name: signal, tags: [signal] }
- 
+    - { name: deadbeef, tags: [deadbeef] }

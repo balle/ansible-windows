@@ -1,0 +1,5 @@
+---
+- name: Install deadbeef mp3 player
+  win_chocolatey:
+    name: deadbeef
+    state: present
