@@ -11,5 +11,6 @@
     - { name: python, tags: [python] }
     - { name: vscode, tags: [vscode] }
     - { name: docker, tags: [docker] }
+    - { name: firefox, tags: [firefox] }
     - { name: signal, tags: [signal] }
     - { name: deadbeef, tags: [deadbeef] }
