@@ -10,4 +10,5 @@
     - { name: gpg, tags: [users, gpg] }
     - { name: vscode, tags: [vscode] }
     - { name: docker, tags: [docker] }
+    - { name: signal, tags: [signal] }
  
