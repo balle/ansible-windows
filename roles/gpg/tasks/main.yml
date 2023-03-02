@@ -1,6 +1,6 @@
 ---
 - name: Install GPG
-win_chocolatey:
+  win_chocolatey:
     name: gnupg
     state: present
 
